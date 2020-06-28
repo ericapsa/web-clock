@@ -13,27 +13,22 @@ function moveHands() {
     document.getElementById("hours").style.cssText =
       "-webkit-transform:rotate(" + h + "deg);";
 
+
+      // Check to change background
+      if ( getHours()<=7 || getHours() >=19) { // if it's night: before 7am, after 7pm
+        /* getSeconds()%2 == 0 */
+        document.getElementById("background_day").style.cssText =
+          "opacity: 0;";
+      } else {
+        document.getElementById("background_day").style.cssText =
+          "opacity: 1;";
+      }
+
     setTimeout(moveHands, 1000); // calls function every second
     // out of milliseconds
   }
 }
 
-/*
-function changeBackground() {
-  with (new Date()) {
-    if (getSeconds()%2 == 0) {
-      /* 0<=getHours()<=7 || 19 <= getHours()<= 24 
-      document.getElementById("background").style.cssText =
-        "background-color: #231a35;" // purple
-    } else {
-      document.getElementById("background").style.cssText =
-        "background-color: #538ca3;" // blue
-    }
-
-    setTimeout(changeBack, 1000); // every 30 mins: 1800000
-  }
-}  */
-
-
 window.onload = moveHands;
-window.onload = changeBackground;
+
+// Solution: window.onload can only run one function at a time? 

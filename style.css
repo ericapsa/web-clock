@@ -8,19 +8,23 @@ body {
   background-image: url("star.jpg"); /*note: background image is 616x385 */
   background-color: #231a35; /*purple! */
 
-
-  /* background-image: url("cloud.png"); */
-  /* background-color: #538ca3; /*blue!*/
-
   background-repeat: no-repeat;
   background-size: auto; /*HWAT DOES THIS DO LMAO??*/
 
 }
 
-#background {
+#background_day {
   height: 100%;
   width: 100%;
+
+  background-image: url("cloud.png");
+  background-color: #538ca3; /*blue!*/
+
+  background-repeat: no-repeat;
+  background-size: auto;
 }
+
+
 
 /* references the class! */
 .clock {
@@ -42,7 +46,8 @@ body {
   position: absolute;
   width: 3px;
   height: 15px;
-  background: #8b8395; /*black: 111111, current: pale purple*/
+  background: #dddddd; /*black: 111111, prev: pale purple: 8b8395, current: opaque white*/
+  opacity: .5;
   left: 0;
   top: 0;
   right: 0;
@@ -54,7 +59,8 @@ body {
   position: absolute;
   width: 15px;
   height: 3px;
-  background: #8b8395;
+  background: #dddddd;
+  opacity: 0.5;
   top: 0;
   bottom: 0;
   right: 0;
@@ -65,7 +71,8 @@ body {
   position: absolute;
   width: 3px;
   height: 15px;
-  background: #8b8395;
+  background: #dddddd;
+  opacity: .5;
   left: 0;
   bottom: 0;
   right: 0;
@@ -76,7 +83,8 @@ body {
   position: absolute;
   width: 15px;
   height: 3px;
-  background: #8b8395;
+  background: #dddddd;
+  opacity: 0.5;
   top: 0;
   bottom: 0;
   left: 0;
