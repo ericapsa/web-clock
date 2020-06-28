@@ -5,14 +5,125 @@
 }
 
 body {
-  background-color: #000;
+  background-image: url("star.jpg");
+  background-color: #231a35; /*purple!*/
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 /* references the class! */
 .clock {
   height: 500px;
   width: 500px;
-  background-color: #dddddd;
-  border-radius: 100%; /*makes it a circle?*/
+  background-color: transparent; /*white inside: dddddd*/
+  border-radius: 20%; /* 50%makes it a circle?*/
   border: 3px solid #aaaaaa;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.twelve{
+  /*Fixes it in comparison to the screen, not by number of pixels*/
+  position: absolute;
+  width: 3px;
+  height: 15px;
+  background: #8b8395; /*black: 111111, current: pale purple*/
+  left: 0;
+  top: 0;
+  right: 0;
+  /* 0 from top & bottom, auto for left right; */
+  margin: 0 auto;
+}
+
+.three {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background: #8b8395;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto 0;
+}
+
+.six {
+  position: absolute;
+  width: 3px;
+  height: 15px;
+  background: #8b8395;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.nine {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background: #8b8395;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
+}
+
+.center {
+  height: 10px;
+  width: 10px;
+  background: #e5bb2c; /*og: grey 111111, current: gold*/
+  position: absolute; /*FIgure out what this what does*/
+  top: 0; /*counting from original position, how far away it is from the top*/
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /*Cannot be more than __ pixels from the top*/
+  margin: auto;
+  border-radius: 50%;
+}
+
+/*# references the id*/
+#seconds {
+  position: absolute;
+  height: 160px;
+  width: 2px;
+  left: 0;
+  right: 0;
+  bottom: 160px; /*From center of object, how far from given measurement*/
+  top: 0px;
+  margin: auto;
+  background: #000;
+  -webkit-transform-origin: bottom;
+  /*setting up where u will be transforming from*/
+  background: #e5bb2c; /*red: ff4136, current: gold*/
+}
+
+#minutes {
+  position: absolute;
+  height: 200px;
+  width: 2px;
+  left: 0;
+  right: 0;
+  bottom: 200px;
+  top: 0px;
+  margin: auto;
+  background: #ffff; /*black: 000, current: white*/
+  -webkit-transform-origin: bottom;
+}
+
+#hours {
+  position: absolute;
+  height: 80px;
+  width: 6px;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+  top: 0px;
+  margin: auto;
+  background: #ffff;
+  -webkit-transform-origin: bottom;
 }
