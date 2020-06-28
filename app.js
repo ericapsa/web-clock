@@ -18,4 +18,22 @@ function moveHands() {
   }
 }
 
+/*
+function changeBackground() {
+  with (new Date()) {
+    if (getSeconds()%2 == 0) {
+      /* 0<=getHours()<=7 || 19 <= getHours()<= 24 
+      document.getElementById("background").style.cssText =
+        "background-color: #231a35;" // purple
+    } else {
+      document.getElementById("background").style.cssText =
+        "background-color: #538ca3;" // blue
+    }
+
+    setTimeout(changeBack, 1000); // every 30 mins: 1800000
+  }
+}  */
+
+
 window.onload = moveHands;
+window.onload = changeBackground;

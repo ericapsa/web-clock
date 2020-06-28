@@ -5,10 +5,21 @@
 }
 
 body {
-  background-image: url("star.jpg");
-  background-color: #231a35; /*purple!*/
+  background-image: url("star.jpg"); /*note: background image is 616x385 */
+  background-color: #231a35; /*purple! */
+
+
+  /* background-image: url("cloud.png"); */
+  /* background-color: #538ca3; /*blue!*/
+
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: auto; /*HWAT DOES THIS DO LMAO??*/
+
+}
+
+#background {
+  height: 100%;
+  width: 100%;
 }
 
 /* references the class! */
@@ -16,7 +27,7 @@ body {
   height: 500px;
   width: 500px;
   background-color: transparent; /*white inside: dddddd*/
-  border-radius: 20%; /* 50%makes it a circle?*/
+  border-radius: 20%; /* 50% makes it a circle*/
   border: 3px solid #aaaaaa;
   margin: auto;
   position: absolute;
